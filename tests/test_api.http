@@ -1,0 +1,41 @@
+### Health Check
+GET http://localhost:8080/health
+
+### Signup
+POST http://localhost:8080/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "SecurePass123!",
+  "name": "John Doe"
+}
+
+### Login
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "SecurePass123!"
+}
+
+### Get Profile (Protected)
+GET http://localhost:8080/api/v1/profile
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
+
+### Refresh Token
+POST http://localhost:8080/api/v1/auth/refresh
+Content-Type: application/json
+
+{
+  "refresh_token": "YOUR_REFRESH_TOKEN_HERE"
+}
+
+### Logout
+POST http://localhost:8080/api/v1/auth/logout
+Content-Type: application/json
+
+{
+  "refresh_token": "YOUR_REFRESH_TOKEN_HERE"
+}

@@ -1,2 +1,2 @@
 # auth-service
-Auth service built in Golang
+A sample auth service built in Golang
